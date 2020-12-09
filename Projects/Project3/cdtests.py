@@ -1,4 +1,4 @@
-# Name: Jacob Wren
+# Name:         Jacob Wren
 # Course:       CPE 101
 # Instructor:   Irene Humer
 # Assignment:   Calcudoku Project
@@ -6,6 +6,7 @@
 
 
 import calcudoku
+
 
 assert calcudoku.find_max([1, 2, 3]) == 3
 assert calcudoku.find_max([4, 2, 3]) == 4

@@ -1,4 +1,4 @@
-# Name: Jacob Wren
+# Name:         Jacob Wren
 # Course:       CPE 101
 # Instructor:   Irene Humer
 # Assignment:   Pset6
@@ -56,7 +56,6 @@ def get_mode(ints: List[int]) -> int:
                 most_latter = most
             else:
                 most_latter = most_latter
-            #most_latter = max(most, most_latter)
         else:
             most_latter = most
         if i == len(ints) - 1:
@@ -128,7 +127,6 @@ def fibonacci(n: int) -> List[int]:
     return l
         
 
-
 def geo_mean(floats: List[float]) -> float:
     if len(floats) == 0:
         return 0
@@ -154,7 +152,6 @@ def harmonic_mean(floats: List[float]) -> float:
     return (len(floats) - num_negs) / recip_sum 
 
 
-
 def nest_lists(n: int) -> List[Any]:
     x = []
     for i in range(n - 1):
@@ -166,7 +163,6 @@ def solve_bool_exp(bool_exp: List[str], bools:
                    Tuple[bool, bool]) -> bool:
     if bool_exp[0] == "not":
         x, operator = not bools[0], bool_exp[2]
-        #operator = bool_exp[2]
         if bool_exp[3] == "not":
             y = not bools[1]
         else:
@@ -176,7 +172,6 @@ def solve_bool_exp(bool_exp: List[str], bools:
         return x or y
     else: 
         x, operator = bools[0], bool_exp[1]
-        #operator = bool_exp[1]
         if bool_exp[2] == "not":
             y = not bools[1]
         else:
@@ -184,48 +179,3 @@ def solve_bool_exp(bool_exp: List[str], bools:
         if bool_exp[1] == "and":
             return x and y
         return x or y
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

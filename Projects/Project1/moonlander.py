@@ -5,8 +5,6 @@
 # Term:         Winter 2020
 
 
-
-
 def main():
     show_welcome()
     get_altitude_ = get_altitude()
@@ -16,23 +14,15 @@ def main():
     time = 0
     z = update_fuel(get_fuel_, 0)
     p = update_velocity(0, 0)
-    #p_not = update_velocity(0, 0)
     q = update_acceleration(1.62, f_r)
-    #k = update_altitude(get_altitude_, p, q)
     k = get_altitude_
     
-    #l = [0]
-    #n = -1
+
     while k > 0:
         #n = n + 1
         z = update_fuel(z, f_r)
         k = update_altitude(k, p, update_acceleration(1.62, f_r))
         p = update_velocity(p, update_acceleration(1.62, f_r))
-        
-        
-        #l.append(p)
-        #k = update_altitude(k, l[n], update_acceleration(1.62, f_r))
-        
         
         time = time + 1
         if z < 0:
@@ -41,8 +31,6 @@ def main():
         if k == 0:
             display_landing_status(p)
         if z > 0 and k > 0:
-            #p_not = update_velocity(p_not, update_acceleration(1.62, f_r))
-            #f_r = min(get_fuel_rate(get_fuel_), z)
             f_r = get_fuel_rate(z)
         else:
             f_r = 0
@@ -52,7 +40,6 @@ def show_welcome() -> None:
     print("\nWelcome aboard the Lunar Module (LM) Flight Simulator!\n")
     print("  To begin, provide an initial altitude and fuel amount.")
     print("  To simulate the actual LM, use 1300 meters and 500 liters.\n")
-    
     
     
 def get_fuel() -> int:
@@ -79,8 +66,6 @@ def get_fuel_rate(fuel_amount: int) -> int:
     return min(fuel_amount, fuel_rate)
 
         
-    
-    
 def update_fuel(fuel_amount: int, fuel_rate: int) -> int:
     fuel_Now = fuel_amount - fuel_rate
     if fuel_Now < 0:
@@ -98,7 +83,6 @@ def update_velocity(velocity: float, acceleration: float) -> float:
     return velocity
         
 
-
 def update_altitude(altitude: float,
                     velocity: float,
                     acceleration: float) -> float:
@@ -108,23 +92,15 @@ def update_altitude(altitude: float,
     return altitude
 
 
-
-# f"{variable:width.#f}"
 def display_state(time: int,
                   altitude: float,
                   velocity: float,
                   fuel_amount: int,
                   fuel_rate: int) -> None:
-    #if fuel_amount < 0:
-        #fuel_amount == 0
     if altitude <= 0:
         print()
         print("LM state at landing/impact")
         print("    Time: {0:4} s\n    Fuel: {1:4} l\n    Rate: {2:4} l/s\nAltitude: {3:7.2f} m\nVelocity: {4:7.2f} m/s".format(time, fuel_amount, fuel_rate, altitude, velocity))
-        #print("    Fuel: {0:4} l".format(fuel_amount))
-        #print("    Rate: {0:4} l/s".format(fuel_rate))
-        #print("Altitude: {0:7.2f} m".format(altitude))
-        #print("Velocity: {0:7.2f} m/s".format(velocity))
         print()
     elif time == 0:
         print()
@@ -138,9 +114,6 @@ def display_state(time: int,
         print()
 
         
-
-
-
 def display_landing_status(velocity: float) -> None:
     if -1 <= velocity <= 0:
         print("[LANDING STATUS] The Eagle has landed!")
@@ -150,7 +123,5 @@ def display_landing_status(velocity: float) -> None:
         print("[LANDING STATUS] Ouch, that hurt!")
         
 
-
-# no additional code below this line
 if __name__ == "__main__":
     main()

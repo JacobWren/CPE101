@@ -1,11 +1,10 @@
-# Name: Jacob Wren
+# Name:         Jacob Wren
 # Course:       CPE 101
 # Instructor:   Irene Humer
 # Assignment:   Problem Set 4
 # Term:         Winter 2020
 
 
-# Use better names!
 def all_input() -> str:
     b = 'a'
     c = ''
@@ -15,7 +14,7 @@ def all_input() -> str:
         c = c + a
     return c
 
-# Use better names!
+
 def mul(x: int, y: int) -> int:
     n = max(x, y)
     m = min(x, y)
@@ -64,7 +63,6 @@ def div(x: int, y: int) -> int:
         return s
     
 
-
 def mod(x: int, y: int) -> int:
     numerator = x
     if  y > x:
@@ -75,7 +73,6 @@ def mod(x: int, y: int) -> int:
         while numerator >= y:
             numerator = numerator - y
         return numerator    
-
 
 
 def gcd(x: int, y: int) -> int:
@@ -150,23 +147,8 @@ def weave_strings(s1: str, s2: str) -> str:
         left = max(len(s1), len(s2)) - min_len
         return word_prime + end[-left:]
 
-'''
-def to_pig_latin(word: str) -> str:
-    vowel = ['A', 'E', 'I', 'O', 'U']
-    if word[0] ==  vowel:
-        return word + 'YAY'
-    else:
-        i = 0
-        word_prime = word
-        while word_prime[i] not in vowel:
-            length = len(word) 
-            word = word[1:length] + word[0]
-            i = i + 1
-        return word + 'AY'
-'''  
 
 def to_pig_latin(word: str) -> str:
-    #vowel = ['A', 'E', 'I', 'O', 'U']
     if(word[0] == 'A' or word[0] == 'E' or word[0] == 'I'
        or word[0] == 'O' or word[0] == 'U'):
         return word + 'YAY'
@@ -180,52 +162,3 @@ def to_pig_latin(word: str) -> str:
             if i >= length:
                 break
         return word + 'AY'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    

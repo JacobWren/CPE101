@@ -5,7 +5,7 @@
 # Term:         Winter 2020
 
 
-from Project5 import pixelmagic
+import pixelmagic
 
 
 assert pixelmagic.main_small(['any', 'turn', 'original.ppm']) == None

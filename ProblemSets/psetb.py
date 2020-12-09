@@ -1,7 +1,7 @@
 # Name: Jacob Wren
 # Course: CPE 101
-# Instructor: Daniel Kauffman
-# Assignment: Problem set8
+# Instructor: Irene Humer
+# Assignment: Problem setb
 # Term: Winter 2020
 
 
@@ -16,4 +16,3 @@ def parse_term(text):
 def parse_time(text):
     hold = re.search(r"([0-1][0-9]:[0-5][0-9](:[0-5][0-9])?(AM|PM)?)", text)
     return hold.group()
-    

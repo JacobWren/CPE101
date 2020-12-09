@@ -1,8 +1,9 @@
 # Name: Jacob Wren
 # Course: CPE 101
-# Instructor: Daniel Kauffman
+# Instructor: Irene Humer
 # Assignment: Problem set8
 # Term: Winter 2020
+
 
 class Point:
     
@@ -28,7 +29,6 @@ class Point:
         return (slope, self.y - (slope * self.x))
         
 
-
 class Line:
 
     def __init__(self, p1: Point, p2: Point) -> None:
@@ -40,6 +40,7 @@ class Line:
             self.m = slope
             self.b = p1.y - (slope * p1.x)
 
+            
     def __eq__(self, other: 'Line') -> bool:
         return self.m == other.m and self.b == other.b
 
@@ -55,7 +56,6 @@ class Line:
         intercept = point.y - (self.m * point.x)
         new_p = (self.m * -1.5) + intercept
         return Line(point, Point(-1.5, new_p))          
-        #return Line(point, Point(0, intercept))
 
 
     def to_perpendicular(self) -> 'Line':
@@ -65,10 +65,8 @@ class Line:
         return Line(Point(x, y), Point(0, self.b))
 
 
-
 class Circle:
 
-    
     def __init__(self, center: Point, radius: int) -> None:
         self.center = center
         self.radius = radius
@@ -83,15 +81,14 @@ class Circle:
 
 
     def overlaps(self, other: 'Circle') -> bool:
-        #dist_cent = ((self.center[0] - other.center[0]) ** 2 + (self.center[1] - other.center[1]) ** 2) ** (1 / 2)
         dist_cent = Point.distance(self.center, other.center)
         radi_sum = self.radius + other.radius
         return dist_cent < radi_sum 
 
+    
     def bisects(self, line: Line) -> bool:
         return self.center.y == (line.m * self.center.x) + line.b
    
-
 
 def get_point_distances(points: Point) -> float:
     return [i.distance(Point(0, 0)) for i in points] 
@@ -107,43 +104,3 @@ def are_in_first_quadrant(points: Point) -> Point:
 
 def overlaps_unit_circle(circles: Circle) -> Circle:
     return [i for i in circles if Circle(Point(0, 0), 1).overlaps(i)]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

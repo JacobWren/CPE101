@@ -1,4 +1,4 @@
-# Name: Jacob Wren
+# Name:         Jacob Wren
 # Course:       CPE 101
 # Instructor:   Irene Humer
 # Assignment:   Problem Set I
@@ -43,23 +43,8 @@ def round_to_hundredths(x: float) -> float:
     first = (((x * 10000000) / 1000000) // 1) % 10
     last = (((x * 10000000) / 100000) // 1) % 10
     third = (((x * 10000000) / 10000) // 1) % 10
-    #fourth = (((x * 10000000) / 1000) // 1) % 10
-    #fifth = (((x * 10000000) / 100) // 1) % 10
-    #sixth = (((x * 10000000) / 10) // 1) % 10
-    #seven = (((x * 10000000) / 1) // 1) % 10
-    #seven = (seven * 2) // 10
-    #fourth = (fourth * 2) // 10
-    #fifth = (fifth * 2) // 10
-    #sixth = (sixth * 2) // 10
-    #sixth = sixth + seven
-    #fifth = fifth + sixth
-    #fourth = fourth + fifth
-    #third = third + fourth
     one = (x * 100) // 100
     a = (last * 10) + (first * 100) 
     w = one + (a / 1000)
     nep = w + (((third * 2) // 10) / 100)
-    #return ((nep * 100) // 1) / 100
     return nep
-    
-    

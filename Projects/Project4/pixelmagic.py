@@ -4,6 +4,8 @@
 # Assignment:   Pixel Magic!
 # Term:         Winter 2020
 
+
+
 import sys
 from typing import List
 

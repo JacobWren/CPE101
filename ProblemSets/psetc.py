@@ -1,9 +1,8 @@
 # Name: Jacob Wren
 # Course: CPE 101
-# Instructor: Daniel Kauffman
-# Assignment: Problem set8
+# Instructor: Irene Humer
+# Assignment: Problem setc
 # Term: Winter 2020
-
 
 
 def reverse_string(chars, index):
@@ -72,39 +71,3 @@ def binary_search(ints, n, start, end):
         return binary_search(ints, n, avg + 1, end)
     elif n < ints[avg]:
         return binary_search(ints, n, start, avg)
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-

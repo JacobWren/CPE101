@@ -1,8 +1,9 @@
-# Name: Jacob Wren
+# Name:         Jacob Wren
 # Course:       CPE 101
 # Instructor:   Irene Humer
 # Assignment:   WordSearch Project
 # Term:         Winter 2020
+
 
 def main():
     chars = str(input() )
@@ -59,7 +60,6 @@ def backward(chars, search):
     Rev_string = ""
     for i in chars:
         Rev_string = i + Rev_string 
-    #Rev_string = chars[::-1]
     index = Rev_string.find(search)
     Og_index = len(chars) - index - 1
     if index != -1:
@@ -67,7 +67,7 @@ def backward(chars, search):
         col = Og_index % width
         return str(row) + ", " + str(col)
 
-
+ 
 def upward(chars: str, search: str) -> str:
     width = int((len(chars)) ** (1 / 2))
     n = int( len(chars) / width)
@@ -174,7 +174,6 @@ def DU(chars: str, search: str) -> str:
         return DU_right(chars, search)
     if DU_left(chars, search) is not None:
         return DU_left(chars, search)
-
 
 
 def Rev_DD_right(chars: str, search: str) -> str:

@@ -1,7 +1,7 @@
 # Name: Jacob Wren
 # Course: CPE 101
-# Instructor: Daniel Kauffman
-# Assignment: Problem set8
+# Instructor: Irene Humer
+# Assignment: Problem set9
 # Term: Winter 2020
 
 
@@ -50,7 +50,6 @@ def bubble_pass(ints: List[int]) -> List[int]:
     return l
 
 
-
 def find_min(l):
     if len(l) == 1:
         return l[0]
@@ -85,26 +84,6 @@ def selection_pass(ints: List[int], start: int) -> List[int]:
         start = start + 1
     return h
 
-'''           
-def insertion_pass(ints: List[int], start: int) -> List[int]:
-    l = [ints[0]]
-    for i in range(len(ints) - 1):
-        h = ints.copy()
-        #find_min(h[0:start + 1])    
-        for k in l:
-            j = 0
-            y = 0
-            if h[i + 1] < k:
-                l.insert(j, h[i + 1])
-                y = 1
-                break
-            j = j + 1
-        if y == 0:
-            l.append(h[i + 1])
-            
-                
-        #start = start + 1
-'''
 
 def insertion_pass(ints, start):
     if start > len(ints):
@@ -131,70 +110,3 @@ def binary_search(ints, n):
             end = find_mid - 1
         if find_mid >= (len(ints) - 1) or find_mid <= 0:
             return -1
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

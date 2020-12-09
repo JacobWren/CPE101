@@ -1,12 +1,10 @@
-# Name: Jacob Wren
+# Name:         Jacob Wren
 # Course:       CPE 101
 # Instructor:   Irene Humer
 # Assignment:   Problem Set 4
 # Term:         Winter 2020
 
-
 import pset4
-
 
 assert pset4.mul(3, 4) == 12
 assert pset4.mul(0, 2) == 0

@@ -1,9 +1,8 @@
-# Name: Jacob Wren
+# Name:         Jacob Wren
 # Course:       CPE 101
 # Instructor:   Irene Humer
 # Assignment:   Problem Set 4
 # Term:         Winter 2020
-
 
 
 def reverse_string(chars: str) -> str:
@@ -11,7 +10,6 @@ def reverse_string(chars: str) -> str:
     for i in chars:
         l = i + l
     return(l)
-# return chars[::-1]
 
 
 def translate_string(chars: str, old: str, new: str) -> str:
@@ -29,7 +27,6 @@ def rotate_chars(chars: str, n_pos: int) -> str:
     for i in chars:
         if i.islower():
             if n_pos + ord(i) > ord('z'):
-                #st = ord('a') + (((n_pos + ord(i) ) % ord('z'))) - 1
                 st = ord('a') + ((( (( (n_pos - 1) % 26) + 1 )
                                     + ord(i) ) % ord('z'))) - 1
                 l = l + chr(st)
@@ -40,7 +37,6 @@ def rotate_chars(chars: str, n_pos: int) -> str:
                 st = ord('A') + (((n_pos + ord(i) ) % ord('Z'))) - 1
                 l = l + chr(st)
             else:
-                #l = l + chr(ord('A') + n_pos)
                 l = l + chr(ord(i) + n_pos)
         else:
             l = l + i
@@ -86,8 +82,6 @@ def is_palindrome(word: str) -> bool:
     return tot > 0
 
 
-
-
 def decode_ascii(chars: str) -> str:
     l = ""
     start = 0
@@ -97,7 +91,6 @@ def decode_ascii(chars: str) -> str:
     for j in range(0, int( len(chars) / 3), 1):
         for i in range(start, end, 1):
             sum = sum + chars[i]
-            #if chars[i] != "0":
             if chars[i] != "0" or i % 2 == 0: 
                 l = l + chars[i]
         if sum == "000":
@@ -148,34 +141,3 @@ def transpose_string(chars: str, width: int) -> str:
         L = ""
         t = t + 1
     return fin
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-

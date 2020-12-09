@@ -1,4 +1,4 @@
-# Name: Jacob Wren
+# Name:         Jacob Wren
 # Course:       CPE 101
 # Instructor:   Irene Humer
 # Assignment:   Problem Set I
@@ -10,6 +10,7 @@ def problem_1() -> None:
     (((x*2) + 10) /2) - x
     print(x)
 
+    
 def problem_2() -> None:
     y = int(input("Enter a number: "))
     z = int(input("Enter a number: "))

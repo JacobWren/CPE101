@@ -1,7 +1,7 @@
 # Name:         Jacob Wren
 # Course:       CPE 101
 # Instructor:   Irene Humer
-# Assignment:   Problem Set2
+# Assignment:   Problem Set 2
 # Term:         Winter 2020
 
 

@@ -1,4 +1,4 @@
-# Name: Jacob Wren
+# Name:         Jacob Wren
 # Course:       CPE 101
 # Instructor:   Irene Humer
 # Assignment:   Problem Set 3
@@ -10,7 +10,6 @@ from typing import Union
 
 def is_positive(x: int) -> bool:
     return x > 0
-
 
 
 def both_positive(x: int, y: int) -> bool:
@@ -33,17 +32,8 @@ def abs_val(n: int) -> int:
     return n if n >= 0 else -n
 
 
-#def is_rotation(rotated: str, word: str) -> bool:
-    #l = []
-    #for i in range(len(word)):
-        #l.append(word[-1] + word[0:-1])
-        #word = l[i]
-    #return rotated in l
-
-
 def is_rotation(rotated: str, word: str) -> bool:
     return word in (rotated + rotated) and (len(rotated) == len(word))
-
 
 
 # Branching

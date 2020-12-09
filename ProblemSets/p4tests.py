@@ -61,11 +61,3 @@ assert pset4.weave_strings("hg", "ihw") == "highw"
 assert pset4.to_pig_latin("INTEGER") == "INTEGERYAY"
 assert pset4.to_pig_latin("FLOAT") == "OATFLAY"
 assert pset4.to_pig_latin("BY") == "BYAY"
-
-
-
-
-
-
-
-
